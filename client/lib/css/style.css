@@ -1,0 +1,23 @@
+body{
+    padding-top: 70px;
+}
+
+/*.return-sell-pane{
+    background-color: wheat;
+}*/
+
+/*.search-pane{
+    background-color: lavender;
+}*/
+
+.remaining{
+    font-size: 80px;
+}
+
+.type-con{
+    font-size: 50px;
+}
+
+.sales-return{
+    text-align: right;
+}

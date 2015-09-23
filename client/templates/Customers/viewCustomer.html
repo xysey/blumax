@@ -1,0 +1,20 @@
+<template name="viewCustomer">
+    <h4>View Customer</h4>
+    <div class="col-md-12">
+        <address>
+            <strong>{{name}}</strong>
+            <br>Address: <small>{{address}}</small>
+            <br>Total number of ordered type container gallons: <small>{{totalContainerOrders}}</small>
+            <br>Total number of ordered type dispenser gallons: <small>{{totalDispenserOrders}}</small>
+            <br>Total number of ordered gallons: <small>{{totalOrders}}</small>
+            <br> Date of last order: <small>{{latestDateOfOrder}}</small>
+            <br> Current No. of type container in Hand: <small>{{currentNumOfContainers}}</small>
+            <br> Current No. of type dispenser in Hand: <small>{{currentNumOfDispensers}}</small>
+            <br> Total gallons in hand: <small>{{currentTotalOfGallons}}</small>
+        </address>
+        <a type="button" class="btn btn-primary btn-lg" id="order" href="/orderList/customer/{{_id}}">View Order List</a>
+         <a type="button" class="btn btn-primary btn-lg" id="return" href="/returnList/customer/{{_id}}">View Return List</a>
+        <a type="button" class="btn btn-primary btn-lg" id="back" href="/">Ok</a>
+    </div>
+    <!-- /.col-md-12 -->
+</template>

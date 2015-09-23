@@ -1,0 +1,23 @@
+<template name="searchCustomer">
+    <h3>Search Customer</h3>
+    <div class="input-group">
+        {{> esInput index="customers" placeholder="Search" class="form-control"}}
+        <span class="input-group-btn">
+    <button type="submit" class="btn"><span class="fui-search"></span></button>
+        </span>
+    </div>
+    {{#ifEsInputIsEmpty index="customers"}}
+    <p>Search for customers</p>
+    {{/ifEsInputIsEmpty}} {{#ifEsIsSearching index="customers"}}
+    <p>Loading...</p>
+    {{else}}
+    <div class="list-group">
+        {{#esEach index="customers"}}
+        {{>list}}
+        {{/esEach}}
+    </div>
+    {{/ifEsIsSearching}} {{#ifEsHasNoResults index="customers"}}
+    <div class="no-results">No results found!</div>
+    {{/ifEsHasNoResults}}
+    <button type="button" class="btn btn-primary btn-lg btn-block" id="top">View Top Customers</button>
+</template>

@@ -1,0 +1,35 @@
+<template name="list">
+    <li class="list-group-item list-group-item-warning customer">
+            {{#if isInRole 'admin'}}
+            <a class="badge customer-badge"
+            href="/editCustomer/{{_id}}"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="Edit customer data">
+                <span class="fui-new"></span>
+            </a>
+            {{/if}}
+            <a class="badge customer-badge"
+            href="/returnGallons/{{_id}}"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="Return gallons">
+                <span class="fui-exit"></span>
+            </a>
+            <a class="badge customer-badge"
+            href="/viewCustomer/{{_id}}"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="View customer data">
+                <span class="fui-eye"></span>
+            </a>
+            <a class="badge customer-badge"
+            href="/newOrder/{{_id}}"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="New order">
+                <span class="fui-plus-circle"></span>
+            </a>
+            <span class="badge" data-placement="top" data-toggle="tooltip" data-original-title="Total gallons ordered">{{totalOrders}}</span> {{name}}
+        </li>
+</template>

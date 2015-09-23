@@ -1,0 +1,35 @@
+<template name="orderListCustomer">
+    <div class="col-md-12">
+    {{#if orderList}}
+            <h4>Order List of {{name}}</h4>
+            <div class="table-responsive">
+            <table class="table table-bordered table-hover table-condensed">
+            <thead>
+              <tr class="info">
+                <th>Date of Purchase</th>
+                <th>No. of Type Container</th>
+                <th>No. of Type Dispenser</th>
+                <th>Total Gallons</th>
+                <th>Staff</th>
+              </tr>
+            </thead>
+            <tbody>
+            {{#each orderList}}
+              <tr>
+                <td>{{orderAt}}</td>
+                <td>{{totalContainer}}</td>
+                <td>{{totalDispenser}}</td>
+                <td>{{totalOrder}}</td>
+                <td>{{staffName}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+
+            </table>
+            </div>
+            {{else}}
+            <h1>No orders have been made by {{name}}</h1>
+            {{/if}}
+          </div>
+
+</template>
