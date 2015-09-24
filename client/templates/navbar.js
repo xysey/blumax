@@ -1,7 +1,7 @@
 Template.navbar.helpers({
     userName: function() {
         if (Meteor.user()) {
-            return Meteor.user().profile.name;
+            return Meteor.user().userName;
         }
         return '';
     },

@@ -40,9 +40,9 @@ Meteor.startup(function() {
             firstName: 'Adrienne',
             lastName: 'Gumobao',
             address: "Bancal, Guagua, Pampanga",
-            userName: 'dark_joy',
+            userName: 'blumax.admin',
             email: 'aj@mailinator.com',
-            password: 'joy22',
+            password: 'b.admin0000',
             roles: ['admin']
         }];
 
